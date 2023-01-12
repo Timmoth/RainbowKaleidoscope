@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script src="dist/RainbowKaleidoscope.js"></script>
+    <script>
+            var m = null;
+            window.onload = function () {
+                if (m == null) {
+                    m = new RainbowKaleidoscope();
+                }
+                m.Start();
+            }
+
+            window.unload = function () {
+                if (m == null) {
+                    return;
+                }
+                m.Stop();
+            }
+    </script>
+</body>
+</html>
