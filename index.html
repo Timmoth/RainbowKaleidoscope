@@ -7,23 +7,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <canvas id="canvas"></canvas>
-    <script src="dist/RainbowKaleidoscope.js"></script>
-    <script>
-            var m = null;
-            window.onload = function () {
-                if (m == null) {
-                    m = new RainbowKaleidoscope();
-                }
-                m.Start();
-            }
-
-            window.unload = function () {
-                if (m == null) {
-                    return;
-                }
-                m.Stop();
-            }
-    </script>
+    <div id="root"></div>
+    <script src="./dist/bundle.js"></script>
 </body>
 </html>
