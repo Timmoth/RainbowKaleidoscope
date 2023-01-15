@@ -30,10 +30,6 @@ module.exports = {
     filename: 'RainbowKaleidoscope.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath:'/dist/',
-    library: {
-      name: 'App',
-      type: 'umd',
-      export: 'default',
-    },
+    library: 'App',
   },
 };

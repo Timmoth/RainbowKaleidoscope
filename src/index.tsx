@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { useRef, useMemo } from "react";
+import { unmountComponentAtNode } from "react-dom";
 import { createRoot, Root } from "react-dom/client";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import React from "react";
@@ -55,20 +56,14 @@ const ShaderPlane = () => {
   );
 };
 
-export default class App {
-  constructor() {}
+export function Start() {
+  createRoot(document.getElementById("root") as HTMLElement).render(
+    <Canvas>
+      <ShaderPlane />
+    </Canvas>
+  );
+}
 
-  root: Root;
-  Start() {
-    this.root = createRoot(document.getElementById("root") as HTMLElement);
-    this.root.render(
-      <Canvas>
-        <ShaderPlane />
-      </Canvas>
-    );
-  }
-
-  Stop() {
-    this.root.unmount();
-  }
+export function Stop() {
+  unmountComponentAtNode(document.getElementById("root") as HTMLElement);
 }
