@@ -2,7 +2,7 @@
   "name": "RainbowKaleidoscope",
   "version": "1.0.0",
   "description": "",
-  "main": "RainbowKaleidoscope.tsx",
+  "main": "index.tsx",
   "scripts": {
     "build": "webpack --mode production"
   },
