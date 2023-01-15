@@ -34,6 +34,5 @@ module.exports = {
     libraryTarget:'umd', 
     umdNamedDefine: true,
     libraryExport: 'default' 
-    
   },
 };
