@@ -27,8 +27,13 @@ module.exports = {
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
+    filename: 'RainbowKaleidoscope.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath:'/dist/',
+    library: 'RainbowKaleidoscope',
+    libraryTarget:'umd', 
+    umdNamedDefine: true,
+    libraryExport: 'default' 
+    
   },
 };
