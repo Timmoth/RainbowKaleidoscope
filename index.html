@@ -12,11 +12,18 @@
     <script>
       var m = null;
       window.onload = function () {
-        App.Start();
+        if (m == null) {
+          m = new App();
+        }
+        m.Start();
       };
 
       window.onunload = function () {
-        App.Stop();
+        if (m == null) {
+          return;
+        }
+
+        m.Stop();
       };
     </script>
   </body>
