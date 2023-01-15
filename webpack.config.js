@@ -29,9 +29,10 @@ module.exports = {
   output: {
     filename: 'RainbowKaleidoscope.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath:'/dist/',
-    library: 'App',
-    libraryTarget: 'self',
-
+    globalObject: 'this',
+    library: {
+      name: 'timmothapp',
+      type: 'umd',
+    },
   },
 };
