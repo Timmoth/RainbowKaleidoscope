@@ -8,15 +8,17 @@
   </head>
   <body>
     <div id="root"></div>
-    <script src="./dist/RainbowKaleidoscope.js"></script>
-    <script>
+    <script type="module">
+      import { Start, Stop } from "./dist/RainbowKaleidoscope.js";
       window.onload = function () {
-        timmothapp.Start();
+        Start();
       };
 
       window.onunload = function () {
-        timmothapp.Stop();
+        Stop();
       };
     </script>
+
+    <script></script>
   </body>
 </html>

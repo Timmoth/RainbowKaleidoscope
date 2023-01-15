@@ -26,13 +26,15 @@ module.exports = {
     ]
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
+    experiments: {
+      outputModule: true
+    },
   output: {
     filename: 'RainbowKaleidoscope.js',
     path: path.resolve(__dirname, 'dist'),
-    globalObject: 'this',
+
     library: {
-      name: 'timmothapp',
-      type: 'umd',
+      type: 'module',
     },
   },
 };
