@@ -33,6 +33,5 @@ module.exports = {
     library: 'App',
     libraryTarget:'umd', 
     umdNamedDefine: true,
-    libraryExport: 'default' 
   },
 };

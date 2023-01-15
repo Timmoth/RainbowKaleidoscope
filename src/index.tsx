@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { useRef, useMemo } from "react";
-import { createRoot, Root } from "react-dom/client";
+import { unmountComponentAtNode } from "react-dom";
+import { createRoot } from "react-dom/client";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import React from "react";
 import fragmentShader from "./fragmentShader.glsl";
@@ -55,18 +56,14 @@ const ShaderPlane = () => {
   );
 };
 
-export default class App {
-  root: Root;
-  Start() {
-    this.root = createRoot(document.getElementById("root") as HTMLElement);
-    this.root.render(
-      <Canvas>
-        <ShaderPlane />
-      </Canvas>
-    );
-  }
+export function Start() {
+  createRoot(document.getElementById("root") as HTMLElement).render(
+    <Canvas>
+      <ShaderPlane />
+    </Canvas>
+  );
+}
 
-  Stop() {
-    this.root.unmount();
-  }
+export function Stop() {
+  unmountComponentAtNode(document.getElementById("root") as HTMLElement);
 }
